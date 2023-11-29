@@ -55,7 +55,7 @@ def run_prometheus_container():
 def run_blackbox_container():
     try:
         current_dir = os.getcwd()
-        subprocess.run(['docker', 'run', '-d', '--name', 'blackbox', '--hostname', 'blackbox', '-p', '9115:9115', '-v', f'{current_dir}/blackbox:/etc/blackbox', 'prom/blackbox-exporter', '--config.file=/etc/blackbox/blackbox.yml'])
+        subprocess.run(['sudo', 'docker', 'run', '-d', '--name', 'blackbox', '--hostname', 'blackbox', '-p', '9115:9115', '-v', f'{current_dir}/blackbox:/etc/blackbox', 'prom/blackbox-exporter', '--config.file=/etc/blackbox/blackbox.yml'])
         print("Контейнер blackbox_exporter успешно запущен.")
     except Exception as e:
         print(f"Ошибка при запуске контейнера blackbox_exporter: {e}")

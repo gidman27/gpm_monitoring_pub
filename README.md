@@ -11,7 +11,7 @@ sudo git clone https://github.com/gidman27/gpm_monitoring_pub.git
 cd gpm_monitoring_pub
 ```
 ```commandline
-sudo sudo python3 setup.py
+sudo python3 setup.py
 ```
 
            
